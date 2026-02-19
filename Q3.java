@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Q2 {
+public class Q3 {
     public static void input (int [] arr){
         Scanner sc = new Scanner (System.in);
     for (int row = 0; row < arr.length ; row++){
@@ -25,7 +25,7 @@ public class Q2 {
             mid = start + (end - start ) / 2;
             
             
-                if (target <= arr [mid]) {
+                if (arr [mid] > target) {
                     target_found = true;
                     solution = mid;
                     end = mid - 1 ;
@@ -38,14 +38,15 @@ public class Q2 {
         }
         else {
         return arr.length;}}
+
     public static void main(String[] args) {
     Scanner sc = new Scanner (System.in);
   System.out.println("enter the size of the array"); 
   int n = sc.nextInt();
   int [] nums = new int [n]; 
  input(nums); 
- System.out.println("Enter the target element");
+ System.out.println("Enter the target");
  int target = sc.nextInt();
- int res = Binary_Search(nums, target);
- System.out.println("output: " + res);
+ int result = Binary_Search(nums , target);
+ System.out.println("Output: " + result);
 }}
