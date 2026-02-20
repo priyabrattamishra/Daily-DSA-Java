@@ -50,5 +50,6 @@ public class Search_insert_position {
  int target = sc.nextInt();
  int result = Binary_Search(nums , target);
  System.out.println("Output: " + result);
+ // haha
 }
 }
