@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Search_insert_position",
+            "request": "launch",
+            "mainClass": "Search_insert_position",
+            "projectName": "Daily-DSA-Java_ecb25496"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
