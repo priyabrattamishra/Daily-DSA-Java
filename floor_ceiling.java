@@ -1,5 +1,5 @@
 import java.util.*;
-public class Search_insert_position {
+public class floor_ceiling {
     public static void input (int [] arr){
         Scanner sc = new Scanner (System.in);
     for (int row = 0; row < arr.length ; row++){
@@ -13,32 +13,33 @@ public class Search_insert_position {
         arr [num1] = arr [num2];
         arr [num2] = temp;
     }
-    public static int Binary_Search (int [] arr , int target) {
+    public static String Binary_Search (int [] arr , int target) {
         int start = 0;
         int end = arr.length - 1;
-        
         int mid = 0;
-        boolean target_found = false;
-        int solution = 0;
+        
+        int floor = -1;
+        int ceiling = -1;
         while (start <= end) {
             mid = start + (end - start ) / 2;
             if (arr [mid] < target) {
                start = mid + 1 ;
+               floor = arr[mid];
             } 
             else if (arr [mid] > target){
                 end = mid - 1;
+                ceiling = arr [mid];
             }
             else { 
-            solution = mid;
-                target_found = true;;
+            floor = arr [mid];
+            ceiling = arr [mid];
                 break;
         }}
         
-        if (target_found) {
-            return solution;
-        }
-        else {
-        return start;}}
+        
+            return ("floor: " + floor + " ceiling: " + ceiling);
+        
+    }
 
     public static void main(String[] args) {
     Scanner sc = new Scanner (System.in);
@@ -48,7 +49,7 @@ public class Search_insert_position {
  input(nums); 
  System.out.println("Enter the target");
  int target = sc.nextInt();
- int result = Binary_Search(nums , target);
+ String result = Binary_Search(nums , target);
  System.out.println("Output: " + result);
 }
 }
